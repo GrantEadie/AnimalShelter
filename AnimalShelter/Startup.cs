@@ -4,9 +4,9 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
-using AninalShelterList.Models;
+using AnimalShelter.Models;
 
-namespace AninalShelterList
+namespace AnimalShelter
 {
   public class Startup
   {
@@ -25,7 +25,7 @@ namespace AninalShelterList
       services.AddMvc();
 
       services.AddEntityFrameworkMySql()
-        .AddDbContext<AninalShelterListContext>(options => options
+        .AddDbContext<AnimalShelterContext>(options => options
         .UseMySql(Configuration["ConnectionStrings:DefaultConnection"]));
     }
 

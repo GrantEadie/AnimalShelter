@@ -1,0 +1,19 @@
+@{
+  Layout = "_Layout";
+}
+
+@using AnimalShelter.Models;
+@model List<AnimalShelter.Models.Animal>;
+
+<h1>Animals</h1>
+
+
+  @foreach(Animal animal in Model)
+  {
+     <h1>@animal.Type</h1>
+     <ul>
+      <li>@animal.Name</li>
+      </ul>
+  }
+
+<p>@Html.ActionLink("Back to animal names", "Index")</p>
