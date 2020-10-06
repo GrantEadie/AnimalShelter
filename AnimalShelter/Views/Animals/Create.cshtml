@@ -19,7 +19,10 @@
     @Html.TextBoxFor(model => model.Breed)
     @Html.LabelFor(model => model.Age)
     @Html.TextBoxFor(model => model.Age)
+
+    @Html.LabelFor(model => model.Type)
+    @Html.DropDownList("TypeId")
     
-    <input type="submit" value="Add new animal" />
+    <input type="submit" value="Add new animal" class="btn btn-default"  />
 }
 <p>@Html.ActionLink("Show all Animals", "Index")</p>

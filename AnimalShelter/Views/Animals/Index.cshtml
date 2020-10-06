@@ -1,10 +1,8 @@
-@{
+@* @{
   Layout = "_Layout";
 }
 
 @using AnimalShelter.Models;
-
-
 @model List<AnimalShelter.Models.Animal>;
 
 <h1>Animals</h1>
@@ -15,11 +13,7 @@
 
   @foreach(Animal animal in Model)
   {
-     <h1>@animal.Type</h1>
-     <ul>
-      <li>@Html.ActionLink($"{animal.Name}", "Details", new { id = animal.AnimalId })</li>
-      </ul>
+     <li>@Html.ActionLink($"{animal.Name}", "Details", new { id = animal.AnimalId }) | @animal.Type.Name</li>
   }
 
-<p>@Html.ActionLink("Sort by animal type", "SortType")</p>
-<p>@Html.ActionLink("Add new animal", "Create")</p>
+<p>@Html.ActionLink("Add new animal", "Create")</p> *@
